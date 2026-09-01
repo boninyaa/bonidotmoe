@@ -76,6 +76,8 @@ a:hover {
   --rect-border-style: solid;
   --rect-max-width: 580px;
 
+  --avatar-border-width: 2px;
+
   --r1-scale: 1;
   --r1-border-width: var(--rect-border-width);
   --r1-pos-x: 0px;
@@ -289,6 +291,21 @@ a:hover {
   overflow: hidden;
 }
 
+.r1-left-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-img {
+  width: 48px;
+  height: 48px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+  border: var(--avatar-border-width) solid #ffffff;
+}
 
 .r1-left, .r1-right {
   display: flex;
@@ -298,23 +315,12 @@ a:hover {
 
 .r1-right {
   text-align: right;
+  margin-top: 56px;
 }
-
 .smaller {
 font-size: calc(0.65rem * var(--r2-bio-scale));
 color: #b3b3b3;
 }
-
-/* .r5-left, .r5-right {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-} 
-
-.r5-right {
-  text-align: right;
-}
-*/
 
 .line-bonibon {
   font-family: var(--r1-t1-font);
